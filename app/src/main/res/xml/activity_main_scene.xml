@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/after_hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:lottie_rawRes="@raw/ramadan1" />
+        <Constraint
+            android:id="@+id/tv_ramadan_date_ab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="16dp"
+            android:text="@string/ab"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="@dimen/text_large"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/tv_ramadan_date_ah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/ah"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_ramadan_date_ab"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ramadan_date_ab" />
+        <Constraint
+            android:id="@+id/image_helal"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/helal" />
+        <Constraint
+            android:id="@+id/ramadan_image"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="@dimen/margin_giant"
+            app:layout_constraintBottom_toTopOf="@+id/tv_swipe_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ramadan_date_ah"
+            />
+
+        <Constraint
+            android:id="@+id/tv_swipe_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_giant"
+            android:text="@string/prayer_header"
+            android:textSize="@dimen/text_normal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/prayer_times_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/prayer_times_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:elevation="@dimen/card_elevation"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_normal"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <Constraint
+            android:id="@+id/tv_ramadan_kareem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_giant"
+            android:fontFamily="cursive"
+            android:text="@string/ramadan_kareem"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_giant"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/prayer_times_container"
+            app:layout_constraintEnd_toStartOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/after_hide"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:alpha="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_rawRes="@raw/ramadan1" />
+        <Constraint
+            android:id="@+id/tv_ramadan_date_ab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ab"
+            app:layout_constraintEnd_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/tv_ramadan_date_ah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/ah"
+            app:layout_constraintEnd_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/image_helal"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_ramadan_kareem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:rotationY="0"
+            android:rotationX="0" />
+        <Constraint
+            android:id="@+id/ramadan_image"
+            android:layout_width="300dp"
+            android:layout_height="280dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="parent"
+            app:lottie_autoPlay="true"
+         />
+
+        <Constraint
+            android:id="@+id/tv_swipe_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_giant"
+            android:text="@string/prayer_header"
+            android:textSize="@dimen/text_normal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/prayer_times_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/prayer_times_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:elevation="@dimen/card_elevation"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_normal"
+            app:cardCornerRadius="@dimen/card_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tv_ramadan_kareem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_giant"
+            android:fontFamily="cursive"
+            android:text="@string/ramadan_kareem"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_giant"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/prayer_times_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/tv_swipe_header" />
+    </Transition>
+
+</MotionScene>
